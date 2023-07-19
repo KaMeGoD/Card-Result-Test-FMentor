@@ -1,0 +1,235 @@
+@import url('https://fonts.googleapis.com/css2?family=Hanken+Grotesk:wght@500;700;800&display=swap');
+@import url('./style/normalize.css');
+
+:root{
+  /* block right */
+  --LightRed: hsl(0, 100%, 67%);
+  --OrangeyYellow: hsl(39, 100%, 56%);
+  --GreenTeal: hsl(166, 100%, 37%);
+  --CobaltBlue: hsl(234, 85%, 45%);
+/* gradient left */
+  --LightSlateBlue: hsl(252, 100%, 67%);
+  --Lightroyalblue: hsl(241, 81%, 54%);
+/* circle */
+  --VioletBlue: hsla(256, 72%, 46%, 1);
+  --PersianBlue: hsla(241, 72%, 46%, 0);
+/* neutral */
+  --White: hsl(0, 0%, 100%);
+  --PaleBlue: hsl(221, 100%, 96%);
+  --LightLavender: hsl(241, 100%, 89%);
+  --DarkGrayBlue: hsl(224, 30%, 27%);
+}
+
+html{
+  font-size: 62.5%;
+  box-sizing: border-box;
+}
+
+*,
+*::after,
+*::before{
+  box-sizing: inherit;
+}
+
+body{
+  background-color: var(--PaleBlue);
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  font-family: 'Hanken Grotesk', sans-serif;
+}
+p,h1,h2, h3, h5{
+  margin: 0;
+}
+
+.card{
+  background-color: var(--White);
+  width: 50rem;
+  display: flex;
+  border-radius: 2rem;
+}
+
+
+.card .card_left{
+  background: hsl(241, 81%, 54%);
+  background: linear-gradient(0deg, hsl(241, 81%, 54%) 0%, hsl(252, 100%, 67%) 100%);
+  border-radius: 2rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 2rem;
+  padding: 3rem;
+  width: 50%;
+}
+
+.card_left h1{
+  text-align: center;
+  font-size: 1.5rem;
+  color: var(--LightLavender);
+  font-weight: 500;
+}
+.card_left .circle{
+  background: var(--PersianBlue);
+  background: linear-gradient(0deg, var(--PersianBlue) 0%, var(--VioletBlue) 100%);
+  border-radius: 50%;
+  width: 13rem;
+  height: 13rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.card_left .circle .result{
+  color: var(--PaleBlue);
+  font-size: 50px;
+  font-weight: 700;
+}
+
+.card_left .circle .text{
+  color: var(--LightLavender);
+}
+
+footer{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 1rem;
+}
+footer h3{
+  color: var(--PaleBlue);
+  text-align: center;
+  font-size: 20px;
+  font-weight: 700;
+}
+
+footer p{
+  text-align: center;
+  color: var(--LightLavender);
+  font-size: 12px;
+}
+
+.card .card_right{
+  width: 50%;
+  padding: 2rem;
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+}
+header h2{
+  font-size: 2rem;
+}
+
+.card1{
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  border-radius: 5px;
+  padding: 1rem 2rem;
+}
+.cd-logo{
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+}
+.cd-logo-img{
+  width: 15px;
+}
+.cd-logo-text{
+  font-size: 1.2rem;
+  font-weight: 500;
+}
+.cd-score{
+  display: flex;
+  align-items: center;
+  gap: .5rem;
+}
+.cd-score-p{
+  color: black;
+  font-weight: 700;
+}
+.cd-score .cd-score-extra{
+  color: hsla(0, 0%, 0%, 0.404);
+  font-weight: 700;
+}
+
+.red{
+  background-color: rgb(255, 87, 87, 20%) ;
+  color: hsl(0, 100%, 67%) ;
+}
+.yellow{
+  background-color: rgb(255, 176, 31, 20%) ;
+  color: var(--OrangeyYellow) ;
+}
+.green{
+  background-color: rgb(0, 189, 145, 20%) ;
+  color: var(--GreenTeal) ;
+}
+.blue{
+  background-color: rgb(17, 37, 212, 20%); ;
+  color: var(--CobaltBlue) ;
+}
+
+.main{
+  display: flex;
+  flex-direction: column;
+  gap: 1rem
+}
+.footer-btn{
+  background-color: var(--DarkGrayBlue);
+  color: var(--White);
+  width: 100%;
+  padding: 1rem;
+  border-radius: 2rem;
+  font-size: 1.2rem;
+  border: none;
+  
+}
+.footer-btn:hover{
+  background: hsl(241, 81%, 54%);
+  background: linear-gradient(0deg, hsl(241, 81%, 54%) 0%, hsl(252, 100%, 67%) 100%);
+}
+
+
+@media only screen and (max-width: 430px) {
+  .card{
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    border-top-left-radius: 0;
+    border-top-right-radius: 0;
+    height: 100%;
+  }
+  .card .card_left{
+    width: 100%;
+    border-top-left-radius: 0;
+    border-top-right-radius: 0;
+  }
+  .card .card_right{
+    width: 100%;
+    height: 100%;
+  }
+  .card1{
+    height: 40px;
+    font-size: 1.8rem;
+  }
+  .cd-logo-img{
+    width: 25px;
+  }
+  .cd-logo-text{
+    font-size: 1.8rem;
+    font-weight: 500;
+  }
+  .footer-btn{
+    height: 50px;
+    font-size: 1.8rem;
+  }
+  .attribution{
+    display: none;
+  }
+}
